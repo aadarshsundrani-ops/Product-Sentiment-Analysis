@@ -32,6 +32,14 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
 import joblib
 
+# 1. Force retraining on the new dataset by removing the old pre-trained model
+if os.path.exists('/content/outputs/tfidf_model.joblib'):
+    try:
+        os.remove('/content/outputs/tfidf_model.joblib')
+        print("🗑️ Removed pre-trained FMCG model weights to allow fresh training on your custom dataset.")
+    except Exception as e:
+        print(f"Could not remove pre-trained model: {e}")
+
 try:
     import plotly.graph_objects as go
     from plotly.subplots import make_subplots
