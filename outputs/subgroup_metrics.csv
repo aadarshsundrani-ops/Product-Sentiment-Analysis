@@ -1,0 +1,23 @@
+dimension,subgroup,samples,pos_ratio,accuracy,precision,recall,f1_macro,f1_binary
+Overall,Full Test Set,1567,0.4927,0.8762,0.8813,0.8653,0.8761,0.8732
+Product Category,Bags & Accessories,64,0.5156,0.8125,0.8387,0.7879,0.8125,0.8125
+Product Category,Boots,90,0.5333,0.9,0.8824,0.9375,0.899,0.9091
+Product Category,Casual Footwear,1194,0.4916,0.8894,0.8984,0.8739,0.8893,0.886
+Product Category,Dress Shoes & Flats,79,0.4937,0.8481,0.9655,0.7179,0.8451,0.8235
+Product Category,Sandals & Slippers,92,0.4891,0.7609,0.717,0.8444,0.7598,0.7755
+Product Category,Sneakers & Athletic,48,0.4167,0.8542,0.7826,0.9,0.8526,0.8372
+Review Length,Short (≤20 words),722,0.5429,0.9169,0.9278,0.9184,0.9164,0.9231
+Review Length,Medium (21-49 words),408,0.4853,0.8725,0.8763,0.8586,0.8724,0.8673
+Review Length,Detailed (≥50 words),437,0.4165,0.8124,0.7841,0.7582,0.806,0.7709
+Intersectional,Bags & Accessories | short,19,0.5263,0.8421,0.8182,0.9,0.8403,0.8571
+Intersectional,Bags & Accessories | detailed,27,0.4074,0.8519,0.8889,0.7273,0.8412,0.8
+Intersectional,Boots | short,12,0.75,1.0,1.0,1.0,1.0,1.0
+Intersectional,Boots | detailed,56,0.4464,0.875,0.8214,0.92,0.8746,0.8679
+Intersectional,Casual Footwear | short,643,0.5303,0.9191,0.9288,0.9179,0.9189,0.9233
+Intersectional,Casual Footwear | detailed,230,0.4087,0.813,0.7865,0.7447,0.8049,0.765
+Intersectional,Dress Shoes & Flats | short,15,0.6,0.8,0.875,0.7778,0.7964,0.8235
+Intersectional,Dress Shoes & Flats | detailed,51,0.5098,0.8431,1.0,0.6923,0.8401,0.8182
+Intersectional,Sandals & Slippers | short,21,0.7619,0.9048,0.9375,0.9375,0.8688,0.9375
+Intersectional,Sandals & Slippers | detailed,45,0.3333,0.6667,0.5,0.6667,0.6494,0.5714
+Intersectional,Sneakers & Athletic | short,12,0.5833,1.0,1.0,1.0,1.0,1.0
+Intersectional,Sneakers & Athletic | detailed,28,0.3929,0.8214,0.75,0.8182,0.8155,0.7826

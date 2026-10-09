@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Dark Mode Default Tokens */
+  --color-bg: #070a13;
+  --color-bg-secondary: #0d1424;
+  --color-surface: rgba(15, 23, 42, 0.7);
+  --color-surface-elevated: rgba(30, 41, 59, 0.85);
+  --color-border: rgba(148, 163, 184, 0.12);
+  --color-border-hover: rgba(99, 102, 241, 0.4);
+  --color-text: #f8fafc;
+  --color-text-muted: #94a3b8;
+  
+  --color-primary: #6366f1;
+  --color-primary-glow: rgba(99, 102, 241, 0.5);
+  --color-secondary: #06b6d4;
+  --color-accent: #ec4899;
+  
+  --color-positive: #10b981;
+  --color-positive-glow: rgba(16, 185, 129, 0.4);
+  --color-negative: #f43f5e;
+  --color-negative-glow: rgba(244, 63, 94, 0.4);
+  --color-neutral: #f59e0b;
+  --color-neutral-glow: rgba(245, 158, 11, 0.4);
+  
+  --canvas-bg: #070a13;
+  --glass-highlight: rgba(255, 255, 255, 0.05);
+}
+
+.light {
+  /* Light Mode Specific Tokens */
+  --color-bg: #f8fafc;
+  --color-bg-secondary: #f1f5f9;
+  --color-surface: rgba(255, 255, 255, 0.92);
+  --color-surface-elevated: rgba(255, 255, 255, 0.98);
+  --color-border: rgba(203, 213, 225, 0.85);
+  --color-border-hover: rgba(99, 102, 241, 0.5);
+  --color-text: #0f172a;
+  --color-text-muted: #334155;
+  
+  --color-primary: #4f46e5;
+  --color-primary-glow: rgba(79, 70, 229, 0.3);
+  --color-secondary: #0891b2;
+  --color-accent: #db2777;
+  
+  --color-positive: #059669;
+  --color-positive-glow: rgba(5, 150, 105, 0.3);
+  --color-negative: #e11d48;
+  --color-negative-glow: rgba(225, 29, 72, 0.3);
+  --color-neutral: #d97706;
+  --color-neutral-glow: rgba(217, 119, 6, 0.3);
+  
+  --canvas-bg: #f8fafc;
+  --glass-highlight: rgba(0, 0, 0, 0.02);
+}
+
+.light .glass-panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+}
+
+.light .glass-panel-elevated {
+  background: var(--color-surface-elevated);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.08);
+}
+
+/* Light Mode Global Contrast Safeguards (WCAG AA Compliance) */
+.light .text-emerald-300,
+.light .text-emerald-400 {
+  color: #047857; /* Emerald 700 */
+}
+
+.light .text-rose-300,
+.light .text-rose-400 {
+  color: #be123c; /* Rose 700 */
+}
+
+.light .text-amber-300,
+.light .text-amber-400 {
+  color: #b45309; /* Amber 700 */
+}
+
+.light .text-slate-400 {
+  color: #475569; /* Slate 600 */
+}
+
+.light .text-slate-300 {
+  color: #334155; /* Slate 700 */
+}
+
+/* Preserve bright syntax inside explicit dark code boxes even in light mode */
+.light pre,
+.light code,
+.light [class*="bg-black"] .text-slate-300,
+.light [class*="bg-black"] .text-slate-400,
+.light [class*="bg-slate-900"] .text-slate-300,
+.light [class*="bg-slate-900"] .text-slate-400 {
+  color: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: var(--color-surface);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--color-border);
+}
+
+.glass-panel-elevated {
+  background: var(--color-surface-elevated);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* Gradient Text Utilities */
+.gradient-text-hero {
+  background: linear-gradient(135deg, #60a5fa 0%, #a855f7 50%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.light .gradient-text-hero {
+  background: linear-gradient(135deg, #1d4ed8 0%, #7e22ce 50%, #be185d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-accent {
+  background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
